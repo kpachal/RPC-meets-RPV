@@ -1,5 +1,6 @@
 # https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EXOT-2016-21/
-# Units: fb
+
+units_Dijet = "fb"
 
 dict_DijetLimits = {
 "1.2" : {"res" : 53.5, "0.07" : 50.2, "0.1" : -1, "??" : -1, "0.15" : -1},
