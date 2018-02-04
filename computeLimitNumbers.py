@@ -40,14 +40,19 @@ def getLowHighVals(list, val) :
     if item < val :
       lowVal = item
     if item > val and highVal < 0 :
-      highVal = val
+      highVal = item
   return lowVal, highVal
 
 # Linear extrapolation between value at ylow and value at yhigh
 def getExtrapolation(low, ylow, high, yhigh, val) :
 
+  # y = mx + b
+  slope = (yhigh - ylow)/(float(high)-float(low))
+  rise = slope * (float(val)-float(low))
 
+  yval = ylow + rise
 
+  #print "for",val,"between",ylow,"at",low,"and",yhigh,"at",high,"found",yval
   return yval
 
 ###############################
@@ -127,11 +132,14 @@ diB_limitDict = {}
 
 # For extrapolating later
 knownVals_accTrigEff = sorted([eval(i) for i in dict_acceptances_times_btriggereff.keys()])
-print knownVals_accTrigEff
 knownVals_taggingEff = sorted([eval(i) for i in dict_taggingEff.keys()])
-print knownVals_taggingEff
 
 for mass in sorted(dict_DiBLimits.keys()) :
+
+  print "\nBeginning mass",mass
+
+  # Don't have branching ratios above 2.5 TeV.
+  if eval(mass) > 2500 : continue
 
   # Need a cross section prediction to be useful.
   if not mass in xSecDict.keys() :
@@ -140,7 +148,9 @@ for mass in sorted(dict_DiBLimits.keys()) :
 
   # Get excluded values from Gaussian limits
   exclSigma = dict_DiBLimits[mass][widthVal]
+  if exclSigma < 0 : continue # this means we didn't set a limit on that width
   diB_limitDict[mass]["observed_limit_pb"] = exclSigma
+  print "Observed limit:",exclSigma
 
   # Now we need a prediction for each value of the coupling
   sigma_at1 = xSecDict[mass]
@@ -153,7 +163,24 @@ for mass in sorted(dict_DiBLimits.keys()) :
     sigma_thisVal = lambdaVal*lambdaVal*sigma_at1
 
     # (acceptance * trigger efficiency)
-    massDown,massUp = getLowHighVals(knownVals_accTrigEff,eval(mass))
+    if mass in dict_acceptances_times_btriggereff.keys() :
+      accTrigEff = dict_acceptances_times_btriggereff[mass]
+    else :
+      massDown,massUp = getLowHighVals(knownVals_accTrigEff,eval(mass))
+      if massDown < 0 or massUp < 0 :
+        print "Not enough information to evaluate di-b mass",mass,"at coupling",lambdaVal,"!"
+        continue
+      accTrigEff = getExtrapolation(massDown,dict_acceptances_times_btriggereff["{0}".format(massDown)],massUp,dict_acceptances_times_btriggereff["{0}".format(massUp)],eval(mass))
+    
+    # b-tagging efficiency
+    if mass in dict_taggingEff.keys() :
+      tagEff = dict_taggingEff[mass]
+    else :
+      massDown,massUp = getLowHighVals(knownVals_taggingEff,eval(mass))
+      if massDown < 0 or massUp < 0 :
+        print "Not enough information to evaluate di-b mass",mass,"at coupling",lambdaVal,"!"
+        continue
+      tagEff = getExtrapolation(massDown,dict_taggingEff["{0}".format(massDown)],massUp,dict_taggingEff["{0}".format(massUp)],eval(mass))
 
     logVal = logVals[lambdaVals.index(lambdaVal)]
     BR = rpcrpv_udd_mapping.log10udd_to_BR(logVal,eval(mass))
@@ -162,8 +189,24 @@ for mass in sorted(dict_DiBLimits.keys()) :
       print "   has BR",BR
       continue
 
+    # Put them all together
+    prediction = sigma_thisVal * accTrigEff * tagEff * BR
+    print "\tCoupling",lambdaVal,": prediction =",sigma_thisVal,"*",accTrigEff,"*",tagEff,"*",BR
+    print "\t           =",prediction
+    name = "predicted_limit_log10lambda{0}_pb".format(logVal)
+
+    diB_limitDict[mass][name] = prediction
+
+    # A point is excluded if the observed limit is lower
+    # than the predicted limit
+    if prediction > diB_limitDict[mass]["observed_limit_pb"] :
+      diB_limitDict[mass]["isExcluded_log10lambda{0}".format(logVal)] = True
+    else :
+      diB_limitDict[mass]["isExcluded_log10lambda{0}".format(logVal)] = False
+
 # Write results to a text file for Max and Javier.
 # As I proceed, check results by printing them out.
+print "Beginning dijet/TLA analysis exclusions"
 with open("dijet_exclusions.txt", 'w') as outfile :
   outfile.write("limit_dict = {\n")
   for mass in sorted([eval(i) for i in limitDict.keys()]) :
@@ -173,6 +216,20 @@ with open("dijet_exclusions.txt", 'w') as outfile :
     for item in sorted(limitDict[massread].keys()) :
       print "\t",item,":",limitDict[massread][item]
       outfile.write("\t{0} : {1},\n".format(item, limitDict[massread][item]))
+    outfile.write("\t},\n")
+  outfile.write("}")
+
+# Di-b turned out to be useless. Don't print any of this.
+#print "Beginning di-B analysis exclusions"
+with open("diB_exclusions.txt", 'w') as outfile :
+  outfile.write("limit_dict = {\n")
+  for mass in sorted([eval(i) for i in diB_limitDict.keys()]) :
+    massread = "{0}".format(mass)
+    #print mass, ":"
+    outfile.write("{0} : {1}\n".format(mass,"{"))
+    for item in sorted(diB_limitDict[massread].keys()) :
+      #print "\t",item,":",diB_limitDict[massread][item]
+      outfile.write("\t{0} : {1},\n".format(item, diB_limitDict[massread][item]))
     outfile.write("\t},\n")
   outfile.write("}")
 

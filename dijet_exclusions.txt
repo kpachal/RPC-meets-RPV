@@ -324,7 +324,7 @@ limit_dict = {
 	predicted_limit_log10lambda-0.7_pb : 0.00132186384267,
 	predicted_limit_log10lambda-0.8_pb : 0.000622029608346,
 	predicted_limit_log10lambda-0.9_pb : 0.00028015839637,
-	predicted_limit_log10lambda-1.0_pb : 0.000121826593084,
+	predicted_limit_log10lambda-1.0_pb : 0.000121030340841,
 	predicted_limit_log10lambda-1.2_pb : 2.12385797264e-05,
 	predicted_limit_log10lambda-1.5_pb : 1.43325403628e-06,
 	predicted_limit_log10lambda-2.0_pb : 1.59250448475e-08,
