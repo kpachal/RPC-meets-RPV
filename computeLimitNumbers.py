@@ -3,6 +3,8 @@ from dict_acceptances import *
 from dict_DijetLimits_MoriondPaper import *
 from dict_TLALimits_ATLAS_CONF_2016_030 import *
 
+from rpcrpv_udd_mapping import log10udd_to_BR
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -57,8 +59,12 @@ for mass in limitDict.keys() :
     sigma_thisVal = lambdaVal*lambdaVal*sigma_at1
 
     # Prediction is cross section times acceptance times branching ratio
-    # Here, branching ratio is 1
-    BR = 1.0
+    # Basic version: branching ratio is 1
+    #BR = 1.0
+    # With new code from Javier, can get actual BR
+    print mass, lambdaVal
+    BR = log10udd_to_BR(log10(lambdaVal),mass)
+    print "   has BR",BR
     acc = dict_acceptances[mass]
     prediction = sigma_thisVal * acc * BR
     name = "predicted_limit_lambda{0}_pb".format(lambdaString)
