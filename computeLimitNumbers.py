@@ -124,89 +124,8 @@ for mass in sorted(limitDict.keys()) :
     else :
       limitDict[mass]["isExcluded_log10lambda{0}".format(logVal)] = False
 
-# Check if di-b can improve on any of these results.
-# Here, take the masses from Gaussian limits
-# and extrapolate linearly between acceptance and
-# efficiency points.
-diB_limitDict = {}
-
-# For extrapolating later
-knownVals_accTrigEff = sorted([eval(i) for i in dict_acceptances_times_btriggereff.keys()])
-knownVals_taggingEff = sorted([eval(i) for i in dict_taggingEff.keys()])
-
-for mass in sorted(dict_DiBLimits.keys()) :
-
-  print "\nBeginning mass",mass
-
-  # Don't have branching ratios above 2.5 TeV.
-  if eval(mass) > 2500 : continue
-
-  # Need a cross section prediction to be useful.
-  if not mass in xSecDict.keys() :
-    continue
-  diB_limitDict[mass] = {}
-
-  # Get excluded values from Gaussian limits
-  exclSigma = dict_DiBLimits[mass][widthVal]
-  if exclSigma < 0 : continue # this means we didn't set a limit on that width
-  diB_limitDict[mass]["observed_limit_pb"] = exclSigma
-  print "Observed limit:",exclSigma
-
-  # Now we need a prediction for each value of the coupling
-  sigma_at1 = xSecDict[mass]
-  for lambdaVal in lambdaVals :
-
-    # Now find numbers to compare to:
-    # in this case, xsec * (acceptance * trigger efficiency) * (b-tagging efficiency) * BR
-    
-    # xsec
-    sigma_thisVal = lambdaVal*lambdaVal*sigma_at1
-
-    # (acceptance * trigger efficiency)
-    if mass in dict_acceptances_times_btriggereff.keys() :
-      accTrigEff = dict_acceptances_times_btriggereff[mass]
-    else :
-      massDown,massUp = getLowHighVals(knownVals_accTrigEff,eval(mass))
-      if massDown < 0 or massUp < 0 :
-        print "Not enough information to evaluate di-b mass",mass,"at coupling",lambdaVal,"!"
-        continue
-      accTrigEff = getExtrapolation(massDown,dict_acceptances_times_btriggereff["{0}".format(massDown)],massUp,dict_acceptances_times_btriggereff["{0}".format(massUp)],eval(mass))
-    
-    # b-tagging efficiency
-    if mass in dict_taggingEff.keys() :
-      tagEff = dict_taggingEff[mass]
-    else :
-      massDown,massUp = getLowHighVals(knownVals_taggingEff,eval(mass))
-      if massDown < 0 or massUp < 0 :
-        print "Not enough information to evaluate di-b mass",mass,"at coupling",lambdaVal,"!"
-        continue
-      tagEff = getExtrapolation(massDown,dict_taggingEff["{0}".format(massDown)],massUp,dict_taggingEff["{0}".format(massUp)],eval(mass))
-
-    logVal = logVals[lambdaVals.index(lambdaVal)]
-    BR = rpcrpv_udd_mapping.log10udd_to_BR(logVal,eval(mass))
-    if BR < 0 :
-      print "Evaluating for",logVal,eval(mass)
-      print "   has BR",BR
-      continue
-
-    # Put them all together
-    prediction = sigma_thisVal * accTrigEff * tagEff * BR
-    print "\tCoupling",lambdaVal,": prediction =",sigma_thisVal,"*",accTrigEff,"*",tagEff,"*",BR
-    print "\t           =",prediction
-    name = "predicted_limit_log10lambda{0}_pb".format(logVal)
-
-    diB_limitDict[mass][name] = prediction
-
-    # A point is excluded if the observed limit is lower
-    # than the predicted limit
-    if prediction > diB_limitDict[mass]["observed_limit_pb"] :
-      diB_limitDict[mass]["isExcluded_log10lambda{0}".format(logVal)] = True
-    else :
-      diB_limitDict[mass]["isExcluded_log10lambda{0}".format(logVal)] = False
-
 # Write results to a text file for Max and Javier.
 # As I proceed, check results by printing them out.
-print "Beginning dijet/TLA analysis exclusions"
 with open("dijet_exclusions.txt", 'w') as outfile :
   outfile.write("limit_dict = {\n")
   for mass in sorted([eval(i) for i in limitDict.keys()]) :
@@ -219,63 +138,26 @@ with open("dijet_exclusions.txt", 'w') as outfile :
     outfile.write("\t},\n")
   outfile.write("}")
 
-# Di-b turned out to be useless. Don't print any of this.
-#print "Beginning di-B analysis exclusions"
-with open("diB_exclusions.txt", 'w') as outfile :
-  outfile.write("limit_dict = {\n")
-  for mass in sorted([eval(i) for i in diB_limitDict.keys()]) :
-    massread = "{0}".format(mass)
-    #print mass, ":"
-    outfile.write("{0} : {1}\n".format(mass,"{"))
-    for item in sorted(diB_limitDict[massread].keys()) :
-      #print "\t",item,":",diB_limitDict[massread][item]
-      outfile.write("\t{0} : {1},\n".format(item, diB_limitDict[massread][item]))
-    outfile.write("\t},\n")
-  outfile.write("}")
+# Reformat the results the way they currently want
+with open("dijet_exclusions.json", 'w') as outfile :
 
-# Cross check plot 1: do all my cross sections make sense?
-#xsecs = []
-#for mass in sorted([eval(i) for i in xSecDict.keys()]) :
-#  xsecs.append(xSecDict["{0}".format(mass)])
-#plt.plot(xsecs)
-#plt.ylabel("cross section [pb]")
-#plt.xlabel("stop mass")
-#plt.savefig("crossSections_reconstructed.eps")
-#plt.yscale('log')
-#plt.savefig("crossSections_reconstructed_log.eps")
-#plt.clf()
+  outfile.write('[\n')
+  for mass in limitDict.keys() :
+    thisDict = limitDict[mass]
+    obsLimit = thisDict["observed_limit_pb"]
+    for logVal in logVals :
+      predLimit = thisDict["predicted_limit_log10lambda{0}_pb".format(logVal)]
+      ratio = predLimit/obsLimit
+      outfile.write('  {\n')
+      outfile.write('    "lambdapp": {0},\n'.format(logVal))
+      outfile.write('    "mstop": {0},\n'.format(mass))
+      outfile.write('    "CLsexp": {0},\n'.format(ratio))
+      outfile.write('    "failedstatus": 0,\n')
+      outfile.write('    "CLs": {0},\n'.format(ratio))
+      outfile.write('  },\n')
 
-# Cross check plot 2: does my excluded region make sense
-# given results shown in Angelo's paper?
+  outfile.write(']')
 
-# Make axes
-#delta = 100
-#x = sorted(limitDict.keys())
-#y = lambdaVals
-#X = []
-#Y = []
-#Z = []
-#for mass in x:
-#  for coupling in y :
-#    X.append(eval(mass))
-#    Y.append(coupling)
-#    lambdaString = "{0}".format(coupling).replace(".","p")
-#    Z.append(int(limitDict[mass]["isExcluded_lambda{0}".format(lambdaString)]))
 
-# Linearly interpolate to get smooth data
-#xi = np.linspace(500,2800,30)
-#yi = np.linspace(0.01,1.1,10)
 
-#points = np.random.rand(1000, 2)
-#zi = plt.mlab.griddata(X, Y, Z, xi, yi, interp='nn')
 
-#print xi
-#print yi
-#print zi
-#plt.yscale('log')
-#plt.ylim([0.01,1.1])
-#CS = plt.contour(xi,yi,zi, 1)#, linewidths=0.5, colors='k')
-#CS = plt.contourf(xi,yi,zi, 1)#,
-                  #vmax=abs(Z).max(), vmin=-abs(Z).max())
-#plt.title('2D exclusion contour')
-#plt.show()
