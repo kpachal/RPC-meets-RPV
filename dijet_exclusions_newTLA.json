@@ -135,107 +135,107 @@
   {
     "lambdapp": -2.0,
     "mstop": 900,
-    "CLsexp": 7.52129911759e-17,
+    "CLsexp": 1.89266963141e-06,
     "failedstatus": 0,
-    "CLs": 7.52129911759e-17
+    "CLs": 1.89266963141e-06
   },
   {
     "lambdapp": -1.5,
     "mstop": 900,
-    "CLsexp": 7.52129911759e-15,
+    "CLsexp": 0.000189266963141,
     "failedstatus": 0,
-    "CLs": 7.52129911759e-15
+    "CLs": 0.000189266963141
   },
   {
     "lambdapp": -1.2,
     "mstop": 900,
-    "CLsexp": 1.13782758202e-13,
+    "CLsexp": 0.00286324433666,
     "failedstatus": 0,
-    "CLs": 1.13782758202e-13
+    "CLs": 0.00286324433666
   },
   {
     "lambdapp": -1.0,
     "mstop": 900,
-    "CLsexp": 6.46831724112e-13,
+    "CLsexp": 0.0162769588301,
     "failedstatus": 0,
-    "CLs": 6.46831724112e-13
+    "CLs": 0.0162769588301
   },
   {
     "lambdapp": -0.9,
     "mstop": 900,
-    "CLsexp": 1.47813651547e-12,
+    "CLsexp": 0.0371960222586,
     "failedstatus": 0,
-    "CLs": 1.47813651547e-12
+    "CLs": 0.0371960222586
   },
   {
     "lambdapp": -0.8,
     "mstop": 900,
-    "CLsexp": 3.24008933794e-12,
+    "CLsexp": 0.081534035505,
     "failedstatus": 0,
-    "CLs": 3.24008933794e-12
+    "CLs": 0.081534035505
   },
   {
     "lambdapp": -0.7,
     "mstop": 900,
-    "CLsexp": 6.78205124548e-12,
+    "CLsexp": 0.170664432172,
     "failedstatus": 0,
-    "CLs": 6.78205124548e-12
+    "CLs": 0.170664432172
   },
   {
     "lambdapp": -0.6,
     "mstop": 900,
-    "CLsexp": 1.34775577279e-11,
+    "CLsexp": 0.33915104051,
     "failedstatus": 0,
-    "CLs": 1.34775577279e-11
+    "CLs": 0.33915104051
   },
   {
     "lambdapp": -0.5,
     "mstop": 900,
-    "CLsexp": 2.53843845219e-11,
+    "CLsexp": 0.638776000601,
     "failedstatus": 0,
-    "CLs": 2.53843845219e-11
+    "CLs": 0.638776000601
   },
   {
     "lambdapp": -0.4,
     "mstop": 900,
-    "CLsexp": 4.57149478777e-11,
+    "CLsexp": 1.15037697872,
     "failedstatus": 0,
-    "CLs": 4.57149478777e-11
+    "CLs": 1.15037697872
   },
   {
     "lambdapp": -0.3,
     "mstop": 900,
-    "CLsexp": 7.92546633973e-11,
+    "CLsexp": 1.99437480434,
     "failedstatus": 0,
-    "CLs": 7.92546633973e-11
+    "CLs": 1.99437480434
   },
   {
     "lambdapp": -0.2,
     "mstop": 900,
-    "CLsexp": 1.33545026732e-10,
+    "CLsexp": 3.36054466882,
     "failedstatus": 0,
-    "CLs": 1.33545026732e-10
+    "CLs": 3.36054466882
   },
   {
     "lambdapp": -0.1,
     "mstop": 900,
-    "CLsexp": 2.20433998754e-10,
+    "CLsexp": 5.54703022243,
     "failedstatus": 0,
-    "CLs": 2.20433998754e-10
+    "CLs": 5.54703022243
   },
   {
     "lambdapp": -0.0,
     "mstop": 900,
-    "CLsexp": 3.58765967909e-10,
+    "CLsexp": 9.02803414183,
     "failedstatus": 0,
-    "CLs": 3.58765967909e-10
+    "CLs": 9.02803414183
   },
   {
     "lambdapp": 0.2,
     "mstop": 900,
-    "CLsexp": 9.26684443299e-10,
+    "CLsexp": 23.3192095716,
     "failedstatus": 0,
-    "CLs": 9.26684443299e-10
+    "CLs": 23.3192095716
   },
   {
     "lambdapp": -4.0,
@@ -254,107 +254,107 @@
   {
     "lambdapp": -2.0,
     "mstop": 600,
-    "CLsexp": 8.04324426932e-16,
+    "CLsexp": 1.47759770544e-06,
     "failedstatus": 0,
-    "CLs": 8.04324426932e-16
+    "CLs": 1.47759770544e-06
   },
   {
     "lambdapp": -1.5,
     "mstop": 600,
-    "CLsexp": 7.23891984239e-14,
+    "CLsexp": 0.000132983793489,
     "failedstatus": 0,
-    "CLs": 7.23891984239e-14
+    "CLs": 0.000132983793489
   },
   {
     "lambdapp": -1.2,
     "mstop": 600,
-    "CLsexp": 1.04601058459e-12,
+    "CLsexp": 0.00192159132298,
     "failedstatus": 0,
-    "CLs": 1.04601058459e-12
+    "CLs": 0.00192159132298
   },
   {
     "lambdapp": -1.0,
     "mstop": 600,
-    "CLsexp": 5.8715683166e-12,
+    "CLsexp": 0.0107864632497,
     "failedstatus": 0,
-    "CLs": 5.8715683166e-12
+    "CLs": 0.0107864632497
   },
   {
     "lambdapp": -0.9,
     "mstop": 600,
-    "CLsexp": 1.29601444725e-11,
+    "CLsexp": 0.0238086512029,
     "failedstatus": 0,
-    "CLs": 1.29601444725e-11
+    "CLs": 0.0238086512029
   },
   {
     "lambdapp": -0.8,
     "mstop": 600,
-    "CLsexp": 2.74097082373e-11,
+    "CLsexp": 0.0503534651467,
     "failedstatus": 0,
-    "CLs": 2.74097082373e-11
+    "CLs": 0.0503534651467
   },
   {
     "lambdapp": -0.7,
     "mstop": 600,
-    "CLsexp": 5.58228097694e-11,
+    "CLsexp": 0.102550230808,
     "failedstatus": 0,
-    "CLs": 5.58228097694e-11
+    "CLs": 0.102550230808
   },
   {
     "lambdapp": -0.6,
     "mstop": 600,
-    "CLsexp": 1.07081319353e-10,
+    "CLsexp": 0.196715537255,
     "failedstatus": 0,
-    "CLs": 1.07081319353e-10
+    "CLs": 0.196715537255
   },
   {
     "lambdapp": -0.5,
     "mstop": 600,
-    "CLsexp": 1.96255160171e-10,
+    "CLsexp": 0.360533840127,
     "failedstatus": 0,
-    "CLs": 1.96255160171e-10
+    "CLs": 0.360533840127
   },
   {
     "lambdapp": -0.4,
     "mstop": 600,
-    "CLsexp": 3.46312057217e-10,
+    "CLsexp": 0.636198384601,
     "failedstatus": 0,
-    "CLs": 3.46312057217e-10
+    "CLs": 0.636198384601
   },
   {
     "lambdapp": -0.3,
     "mstop": 600,
-    "CLsexp": 5.87928139832e-10,
+    "CLsexp": 1.08006326961,
     "failedstatus": 0,
-    "CLs": 5.87928139832e-10
+    "CLs": 1.08006326961
   },
   {
     "lambdapp": -0.2,
     "mstop": 600,
-    "CLsexp": 9.77699689269e-10,
+    "CLsexp": 1.79609964474,
     "failedstatus": 0,
-    "CLs": 9.77699689269e-10
+    "CLs": 1.79609964474
   },
   {
     "lambdapp": -0.1,
     "mstop": 600,
-    "CLsexp": 1.59860737423e-09,
+    "CLsexp": 2.93674854196,
     "failedstatus": 0,
-    "CLs": 1.59860737423e-09
+    "CLs": 2.93674854196
   },
   {
     "lambdapp": -0.0,
     "mstop": 600,
-    "CLsexp": 2.57920032903e-09,
+    "CLsexp": 4.73816330877,
     "failedstatus": 0,
-    "CLs": 2.57920032903e-09
+    "CLs": 4.73816330877
   },
   {
     "lambdapp": 0.2,
     "mstop": 600,
-    "CLsexp": 6.60661517955e-09,
+    "CLsexp": 12.136793442,
     "failedstatus": 0,
-    "CLs": 6.60661517955e-09
+    "CLs": 12.136793442
   },
   {
     "lambdapp": -4.0,
@@ -492,107 +492,107 @@
   {
     "lambdapp": -2.0,
     "mstop": 700,
-    "CLsexp": 2.63234373521e-16,
+    "CLsexp": 4.4807146953e-06,
     "failedstatus": 0,
-    "CLs": 2.63234373521e-16
+    "CLs": 4.4807146953e-06
   },
   {
     "lambdapp": -1.5,
     "mstop": 700,
-    "CLsexp": 3.0271952955e-14,
+    "CLsexp": 0.00051528218996,
     "failedstatus": 0,
-    "CLs": 3.0271952955e-14
+    "CLs": 0.00051528218996
   },
   {
     "lambdapp": -1.2,
     "mstop": 700,
-    "CLsexp": 4.55860388612e-13,
+    "CLsexp": 0.00775955022491,
     "failedstatus": 0,
-    "CLs": 4.55860388612e-13
+    "CLs": 0.00775955022491
   },
   {
     "lambdapp": -1.0,
     "mstop": 700,
-    "CLsexp": 2.52704998581e-12,
+    "CLsexp": 0.0430148610749,
     "failedstatus": 0,
-    "CLs": 2.52704998581e-12
+    "CLs": 0.0430148610749
   },
   {
     "lambdapp": -0.9,
     "mstop": 700,
-    "CLsexp": 5.7573374593e-12,
+    "CLsexp": 0.0980000682076,
     "failedstatus": 0,
-    "CLs": 5.7573374593e-12
+    "CLs": 0.0980000682076
   },
   {
     "lambdapp": -0.8,
     "mstop": 700,
-    "CLsexp": 1.23977784592e-11,
+    "CLsexp": 0.211032120874,
     "failedstatus": 0,
-    "CLs": 1.23977784592e-11
+    "CLs": 0.211032120874
   },
   {
     "lambdapp": -0.7,
     "mstop": 700,
-    "CLsexp": 2.56224977048e-11,
+    "CLsexp": 0.436140236779,
     "failedstatus": 0,
-    "CLs": 2.56224977048e-11
+    "CLs": 0.436140236779
   },
   {
     "lambdapp": -0.6,
     "mstop": 700,
-    "CLsexp": 4.99929880492e-11,
+    "CLsexp": 0.850969093502,
     "failedstatus": 0,
-    "CLs": 4.99929880492e-11
+    "CLs": 0.850969093502
   },
   {
     "lambdapp": -0.5,
     "mstop": 700,
-    "CLsexp": 9.29217338531e-11,
+    "CLsexp": 1.58169228744,
     "failedstatus": 0,
-    "CLs": 9.29217338531e-11
+    "CLs": 1.58169228744
   },
   {
     "lambdapp": -0.4,
     "mstop": 700,
-    "CLsexp": 1.6521055318e-10,
+    "CLsexp": 2.81217587031,
     "failedstatus": 0,
-    "CLs": 1.6521055318e-10
+    "CLs": 2.81217587031
   },
   {
     "lambdapp": -0.3,
     "mstop": 700,
-    "CLsexp": 2.8333056372e-10,
+    "CLsexp": 4.82278740236,
     "failedstatus": 0,
-    "CLs": 2.8333056372e-10
+    "CLs": 4.82278740236
   },
   {
     "lambdapp": -0.2,
     "mstop": 700,
-    "CLsexp": 4.74199599649e-10,
+    "CLsexp": 8.07171603855,
     "failedstatus": 0,
-    "CLs": 4.74199599649e-10
+    "CLs": 8.07171603855
   },
   {
     "lambdapp": -0.1,
     "mstop": 700,
-    "CLsexp": 7.78960511464e-10,
+    "CLsexp": 13.2592858755,
     "failedstatus": 0,
-    "CLs": 7.78960511464e-10
+    "CLs": 13.2592858755
   },
   {
     "lambdapp": -0.0,
     "mstop": 700,
-    "CLsexp": 1.26089264917e-09,
+    "CLsexp": 21.4626233905,
     "failedstatus": 0,
-    "CLs": 1.26089264917e-09
+    "CLs": 21.4626233905
   },
   {
     "lambdapp": 0.2,
     "mstop": 700,
-    "CLsexp": 3.24325884492e-09,
+    "CLsexp": 55.2060028205,
     "failedstatus": 0,
-    "CLs": 3.24325884492e-09
+    "CLs": 55.2060028205
   },
   {
     "lambdapp": -4.0,
@@ -968,107 +968,107 @@
   {
     "lambdapp": -2.0,
     "mstop": 800,
-    "CLsexp": 1.35611498221e-16,
+    "CLsexp": 3.08997572237e-06,
     "failedstatus": 0,
-    "CLs": 1.35611498221e-16
+    "CLs": 3.08997572237e-06
   },
   {
     "lambdapp": -1.5,
     "mstop": 800,
-    "CLsexp": 1.42392073132e-14,
+    "CLsexp": 0.000324447450848,
     "failedstatus": 0,
-    "CLs": 1.42392073132e-14
+    "CLs": 0.000324447450848
   },
   {
     "lambdapp": -1.2,
     "mstop": 800,
-    "CLsexp": 2.15951639405e-13,
+    "CLsexp": 0.00492056596764,
     "failedstatus": 0,
-    "CLs": 2.15951639405e-13
+    "CLs": 0.00492056596764
   },
   {
     "lambdapp": -1.0,
     "mstop": 800,
-    "CLsexp": 1.2272840589e-12,
+    "CLsexp": 0.0279642802874,
     "failedstatus": 0,
-    "CLs": 1.2272840589e-12
+    "CLs": 0.0279642802874
   },
   {
     "lambdapp": -0.9,
     "mstop": 800,
-    "CLsexp": 2.77259365051e-12,
+    "CLsexp": 0.0631749311855,
     "failedstatus": 0,
-    "CLs": 2.77259365051e-12
+    "CLs": 0.0631749311855
   },
   {
     "lambdapp": -0.8,
     "mstop": 800,
-    "CLsexp": 6.0463721115e-12,
+    "CLsexp": 0.13776960861,
     "failedstatus": 0,
-    "CLs": 6.0463721115e-12
+    "CLs": 0.13776960861
   },
   {
     "lambdapp": -0.7,
     "mstop": 800,
-    "CLsexp": 1.26061769503e-11,
+    "CLsexp": 0.287238038361,
     "failedstatus": 0,
-    "CLs": 1.26061769503e-11
+    "CLs": 0.287238038361
   },
   {
     "lambdapp": -0.6,
     "mstop": 800,
-    "CLsexp": 2.4856653067e-11,
+    "CLsexp": 0.566371255563,
     "failedstatus": 0,
-    "CLs": 2.4856653067e-11
+    "CLs": 0.566371255563
   },
   {
     "lambdapp": -0.5,
     "mstop": 800,
-    "CLsexp": 4.6650355388e-11,
+    "CLsexp": 1.06295164849,
     "failedstatus": 0,
-    "CLs": 4.6650355388e-11
+    "CLs": 1.06295164849
   },
   {
     "lambdapp": -0.4,
     "mstop": 800,
-    "CLsexp": 8.33927392557e-11,
+    "CLsexp": 1.90014521705,
     "failedstatus": 0,
-    "CLs": 8.33927392557e-11
+    "CLs": 1.90014521705
   },
   {
     "lambdapp": -0.3,
     "mstop": 800,
-    "CLsexp": 1.44091008629e-10,
+    "CLsexp": 3.28318560237,
     "failedstatus": 0,
-    "CLs": 1.44091008629e-10
+    "CLs": 3.28318560237
   },
   {
     "lambdapp": -0.2,
     "mstop": 800,
-    "CLsexp": 2.42135775683e-10,
+    "CLsexp": 5.51718459122,
     "failedstatus": 0,
-    "CLs": 2.42135775683e-10
+    "CLs": 5.51718459122
   },
   {
     "lambdapp": -0.1,
     "mstop": 800,
-    "CLsexp": 3.98733229921e-10,
+    "CLsexp": 9.08533580352,
     "failedstatus": 0,
-    "CLs": 3.98733229921e-10
+    "CLs": 9.08533580352
   },
   {
     "lambdapp": -0.0,
     "mstop": 800,
-    "CLsexp": 6.48222961496e-10,
+    "CLsexp": 14.7700839529,
     "failedstatus": 0,
-    "CLs": 6.48222961496e-10
+    "CLs": 14.7700839529
   },
   {
     "lambdapp": 0.2,
     "mstop": 800,
-    "CLsexp": 1.67084254687e-09,
+    "CLsexp": 38.0709819849,
     "failedstatus": 0,
-    "CLs": 1.67084254687e-09
+    "CLs": 38.0709819849
   },
   {
     "lambdapp": -4.0,
@@ -1087,107 +1087,107 @@
   {
     "lambdapp": -2.0,
     "mstop": 500,
-    "CLsexp": 2.43860493995e-15,
+    "CLsexp": 1.38862877619e-05,
     "failedstatus": 0,
-    "CLs": 2.43860493995e-15
+    "CLs": 1.38862877619e-05
   },
   {
     "lambdapp": -1.5,
     "mstop": 500,
-    "CLsexp": 2.19474444596e-13,
+    "CLsexp": 0.00124976589857,
     "failedstatus": 0,
-    "CLs": 2.19474444596e-13
+    "CLs": 0.00124976589857
   },
   {
     "lambdapp": -1.2,
     "mstop": 500,
-    "CLsexp": 3.10664356077e-12,
+    "CLsexp": 0.0176903383372,
     "failedstatus": 0,
-    "CLs": 3.10664356077e-12
+    "CLs": 0.0176903383372
   },
   {
     "lambdapp": -1.0,
     "mstop": 500,
-    "CLsexp": 1.61557577272e-11,
+    "CLsexp": 0.0919966564225,
     "failedstatus": 0,
-    "CLs": 1.61557577272e-11
+    "CLs": 0.0919966564225
   },
   {
     "lambdapp": -0.9,
     "mstop": 500,
-    "CLsexp": 3.61370802448e-11,
+    "CLsexp": 0.205777445511,
     "failedstatus": 0,
-    "CLs": 3.61370802448e-11
+    "CLs": 0.205777445511
   },
   {
     "lambdapp": -0.8,
     "mstop": 500,
-    "CLsexp": 7.30465715262e-11,
+    "CLsexp": 0.415953275422,
     "failedstatus": 0,
-    "CLs": 7.30465715262e-11
+    "CLs": 0.415953275422
   },
   {
     "lambdapp": -0.7,
     "mstop": 500,
-    "CLsexp": 1.44167677742e-10,
+    "CLsexp": 0.820942263461,
     "failedstatus": 0,
-    "CLs": 1.44167677742e-10
+    "CLs": 0.820942263461
   },
   {
     "lambdapp": -0.6,
     "mstop": 500,
-    "CLsexp": 2.66956763455e-10,
+    "CLsexp": 1.52014718604,
     "failedstatus": 0,
-    "CLs": 2.66956763455e-10
+    "CLs": 1.52014718604
   },
   {
     "lambdapp": -0.5,
     "mstop": 500,
-    "CLsexp": 4.8162447564e-10,
+    "CLsexp": 2.74254183297,
     "failedstatus": 0,
-    "CLs": 4.8162447564e-10
+    "CLs": 2.74254183297
   },
   {
     "lambdapp": -0.4,
     "mstop": 500,
-    "CLsexp": 8.22263510384e-10,
+    "CLsexp": 4.68226219599,
     "failedstatus": 0,
-    "CLs": 8.22263510384e-10
+    "CLs": 4.68226219599
   },
   {
     "lambdapp": -0.3,
     "mstop": 500,
-    "CLsexp": 1.3828313226e-09,
+    "CLsexp": 7.87433559131,
     "failedstatus": 0,
-    "CLs": 1.3828313226e-09
+    "CLs": 7.87433559131
   },
   {
     "lambdapp": -0.2,
     "mstop": 500,
-    "CLsexp": 2.26930603853e-09,
+    "CLsexp": 12.9222393323,
     "failedstatus": 0,
-    "CLs": 2.26930603853e-09
+    "CLs": 12.9222393323
   },
   {
     "lambdapp": -0.1,
     "mstop": 500,
-    "CLsexp": 3.68508039467e-09,
+    "CLsexp": 20.984164326,
     "failedstatus": 0,
-    "CLs": 3.68508039467e-09
+    "CLs": 20.984164326
   },
   {
     "lambdapp": -0.0,
     "mstop": 500,
-    "CLsexp": 5.87703790528e-09,
+    "CLsexp": 33.4659535062,
     "failedstatus": 0,
-    "CLs": 5.87703790528e-09
+    "CLs": 33.4659535062
   },
   {
     "lambdapp": 0.2,
     "mstop": 500,
-    "CLsexp": 1.50380992115e-08,
+    "CLsexp": 85.6323095312,
     "failedstatus": 0,
-    "CLs": 1.50380992115e-08
+    "CLs": 85.6323095312
   },
   {
     "lambdapp": -4.0,
@@ -1206,106 +1206,106 @@
   {
     "lambdapp": -2.0,
     "mstop": 1000,
-    "CLsexp": 4.36021847204e-17,
+    "CLsexp": 1.24110508753e-06,
     "failedstatus": 0,
-    "CLs": 4.36021847204e-17
+    "CLs": 1.24110508753e-06
   },
   {
     "lambdapp": -1.5,
     "mstop": 1000,
-    "CLsexp": 4.36021847204e-15,
+    "CLsexp": 0.000124110508753,
     "failedstatus": 0,
-    "CLs": 4.36021847204e-15
+    "CLs": 0.000124110508753
   },
   {
     "lambdapp": -1.2,
     "mstop": 1000,
-    "CLsexp": 6.42258668392e-14,
+    "CLsexp": 0.00182814348859,
     "failedstatus": 0,
-    "CLs": 6.42258668392e-14
+    "CLs": 0.00182814348859
   },
   {
     "lambdapp": -1.0,
     "mstop": 1000,
-    "CLsexp": 3.59718023943e-13,
+    "CLsexp": 0.0102391169721,
     "failedstatus": 0,
-    "CLs": 3.59718023943e-13
+    "CLs": 0.0102391169721
   },
   {
     "lambdapp": -0.9,
     "mstop": 1000,
-    "CLsexp": 8.29257668877e-13,
+    "CLsexp": 0.0236042280522,
     "failedstatus": 0,
-    "CLs": 8.29257668877e-13
+    "CLs": 0.0236042280522
   },
   {
     "lambdapp": -0.8,
     "mstop": 1000,
-    "CLsexp": 1.82904639426e-12,
+    "CLsexp": 0.0520625009916,
     "failedstatus": 0,
-    "CLs": 1.82904639426e-12
+    "CLs": 0.0520625009916
   },
   {
     "lambdapp": -0.7,
     "mstop": 1000,
-    "CLsexp": 3.84487283916e-12,
+    "CLsexp": 0.109441562898,
     "failedstatus": 0,
-    "CLs": 3.84487283916e-12
+    "CLs": 0.109441562898
   },
   {
     "lambdapp": -0.6,
     "mstop": 1000,
-    "CLsexp": 7.67560211303e-12,
+    "CLsexp": 0.218480539299,
     "failedstatus": 0,
-    "CLs": 7.67560211303e-12
+    "CLs": 0.218480539299
   },
   {
     "lambdapp": -0.5,
     "mstop": 1000,
-    "CLsexp": 1.45413286042e-11,
+    "CLsexp": 0.413908546691,
     "failedstatus": 0,
-    "CLs": 1.45413286042e-11
+    "CLs": 0.413908546691
   },
   {
     "lambdapp": -0.4,
     "mstop": 1000,
-    "CLsexp": 2.62598261811e-11,
+    "CLsexp": 0.747467221654,
     "failedstatus": 0,
-    "CLs": 2.62598261811e-11
+    "CLs": 0.747467221654
   },
   {
     "lambdapp": -0.3,
     "mstop": 1000,
-    "CLsexp": 4.56713979884e-11,
+    "CLsexp": 1.30000376728,
     "failedstatus": 0,
-    "CLs": 4.56713979884e-11
+    "CLs": 1.30000376728
   },
   {
     "lambdapp": -0.2,
     "mstop": 1000,
-    "CLsexp": 7.70710402071e-11,
+    "CLsexp": 2.19377218631,
     "failedstatus": 0,
-    "CLs": 7.70710402071e-11
+    "CLs": 2.19377218631
   },
   {
     "lambdapp": -0.1,
     "mstop": 1000,
-    "CLsexp": 1.2737647951e-10,
+    "CLsexp": 3.62568063425,
     "failedstatus": 0,
-    "CLs": 1.2737647951e-10
+    "CLs": 3.62568063425
   },
   {
     "lambdapp": -0.0,
     "mstop": 1000,
-    "CLsexp": 2.07546399269e-10,
+    "CLsexp": 5.90766021663,
     "failedstatus": 0,
-    "CLs": 2.07546399269e-10
+    "CLs": 5.90766021663
   },
   {
     "lambdapp": 0.2,
     "mstop": 1000,
-    "CLsexp": 5.36666307298e-10,
+    "CLsexp": 15.2758236443,
     "failedstatus": 0,
-    "CLs": 5.36666307298e-10
+    "CLs": 15.2758236443
   },
 ]
